@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serviceGroup>
+	<!-- http://localhost:8080/soap-ws-axis2/services/timer?wsdl -->
+	<service name="timer" targetNamespace="http://johnyu.cn/timer_ws/">
+		<!-- SOAP的MPE Message Exchange Pattern,Axix2只支持三种模式：in-only,in-out,Robust-In -->
+		<messageReceivers>
+			<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-only"
+				class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver" />
+			<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out"
+				class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+		</messageReceivers>
+		<description>
+			desc
+		</description>
+		<parameter name="ServiceClass">service.TimeService</parameter>
+	</service>
+	
+	<service name="caculator" targetNamespace="http://johnyu.cn/timer_ws/">
+		<!-- SOAP的MPE Message Exchange Pattern,Axix2只支持三种模式：in-only,in-out,Robust-In -->
+		<messageReceivers>
+			<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-only"
+				class="org.apache.axis2.rpc.receivers.RPCInOnlyMessageReceiver" />
+			<messageReceiver mep="http://www.w3.org/2004/08/wsdl/in-out"
+				class="org.apache.axis2.rpc.receivers.RPCMessageReceiver" />
+		</messageReceivers>
+		<description>
+			my caculator..l.....
+		</description>
+		<parameter name="ServiceClass">service.Caculator</parameter>
+	</service>
+	
+	
+</serviceGroup>
